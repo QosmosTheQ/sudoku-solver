@@ -4,7 +4,6 @@
 using namespace std;
 
 bool isSafe(vector<vector<int>>& board, int row, int col, int num) {
-    // Check if 'num' is not present in the current row, current column, and the current 3x3 subgrid
     for (int i = 0; i < 9; ++i) {
         if (board[row][i] == num || board[i][col] == num ||
             board[row - row % 3 + i / 3][col - col % 3 + i % 3] == num) {
@@ -54,19 +53,17 @@ void printBoard(const vector<vector<int>>& board) {
 }
 
 int main() {
-    vector<vector<int>> sudokuBoard = {
-        {1, 0, 0, 0, 0, 0, 0, 0, 3},
-        {0, 0, 7, 2, 6, 0, 4, 8, 0},
-        {4, 0, 0, 9, 3, 5, 0, 0, 6},
-        {0, 3, 0, 4, 8, 0, 2, 0, 0},
-        {0, 4, 1, 6, 0, 9, 3, 0, 0},
-        {0, 0, 6, 0, 0, 0, 8, 9, 0},
-        {5, 7, 8, 0, 4, 0, 0, 0, 2},
-        {0, 0, 0, 3, 0, 0, 0, 7, 0},
-        {2, 0, 0, 0, 0, 0, 0, 0, 5}
-    };
+    vector<vector<int>> sudokuBoard(9, vector<int>(9, 0));
+
+    cout << "Enter the Sudoku board (enter 0 for empty cells):" << endl;
+    for (int i = 0; i < 9; ++i) {
+        for (int j = 0; j < 9; ++j) {
+            cin >> sudokuBoard[i][j];
+        }
+    }
 
     if (solveSudoku(sudokuBoard)) {
+        cout << "Sudoku solved:" << endl;
         printBoard(sudokuBoard);
     } else {
         cout << "No solution exists." << endl;
