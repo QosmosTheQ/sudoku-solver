@@ -17,7 +17,7 @@ This program contains a C++ application that solves a given Sudoku puzzle by tak
 2. **Downloading the Code**
 
     ```bash
-    git clone https://github.com/YOUR_USERNAME/Sudoku-Solver.git
+    git clone https://github.com/QosmosTheQ/Sudoku-Solver.git
     cd Sudoku-Solver
     ```
 
@@ -51,8 +51,4 @@ This program contains a C++ application that solves a given Sudoku puzzle by tak
 
 ## License
 
-This project is open-source and licensed under the [License Name]. For more information, please see the `LICENSE` file.
-
----
-
-**Note:** Be sure to customize this README.md file to fit your project. Update the "License Name" and other fields according to your project's actual status.
+This project is open-source and licensed under the MIT license. For more information, please see the `LICENSE` file.
