@@ -46,9 +46,15 @@ bool solveSudoku(vector<vector<int>>& board) {
 void printBoard(const vector<vector<int>>& board) {
     for (int i = 0; i < 9; ++i) {
         for (int j = 0; j < 9; ++j) {
-            cout << board[i][j] << " ";
+            if (j == 3 || j == 6) {
+                cout << "| "; // Separate boxes
+            }
+            cout << (board[i][j] == 0 ? "-" : to_string(board[i][j])) << " ";
         }
         cout << endl;
+        if (i == 2 || i == 5) {
+            cout << "------+-------+------" << endl; // Separate boxes
+        }
     }
 }
 
