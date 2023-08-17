@@ -69,10 +69,10 @@ int main() {
     }
 
     if (solveSudoku(sudokuBoard)) {
-        cout << "Sudoku solved:" << endl;
+        cout << "\nSudoku solved:\n" << endl;
         printBoard(sudokuBoard);
     } else {
-        cout << "No solution exists." << endl;
+        cout << "\nNo solution exists." << endl;
     }
 
     return 0;
